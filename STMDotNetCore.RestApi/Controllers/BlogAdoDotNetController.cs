@@ -5,6 +5,7 @@ using STMDotNetCore.RestApi.Models;
 using System.Data;
 using System.Data.SqlClient;
 using System.Reflection.Metadata;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace STMDotNetCore.RestApi.Controllers
 {
@@ -145,21 +146,54 @@ namespace STMDotNetCore.RestApi.Controllers
             int item = FindById(id);
             if (item > 0)
             {
-                blog.BlogId = id;
-                string query = @"UPDATE [dbo].[Tbl_Blog]
-                            SET [BlogTitle] = @BlogTitle
-                            ,[BlogAuthor] = @BlogAuthor
-                            ,[BlogContent] = @BlogContent
-                            WHERE BlogId = @BlogId";
+                string conditions = string.Empty;
                 SqlConnection connection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
                 connection.Open();
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@BlogId", blog.BlogId);
-                cmd.Parameters.AddWithValue("@BlogTitle", blog.BlogTitle);
-                cmd.Parameters.AddWithValue("@BlogAuthor", blog.BlogAuthor);
-                cmd.Parameters.AddWithValue("@BlogContent", blog.BlogContent);
-                int result = cmd.ExecuteNonQuery();
+
+                if (!string.IsNullOrEmpty(blog.BlogTitle))
+                {
+                    conditions += "[BlogTitle] = @BlogTitle, ";
+                }
+                if (!string.IsNullOrEmpty(blog.BlogAuthor))
+                {
+                    conditions += "[BlogAuthor] = @BlogAuthor, ";
+                }
+                if (!string.IsNullOrEmpty(blog.BlogContent))
+                {
+                    conditions += "[BlogContent] = @BlogContent, ";
+                }
+                if (conditions.Length == 0)
+                {
+                    return NotFound("No data found.");
+                }
+                conditions = conditions.Substring(0, conditions.Length - 2);
+
+                string query = $@"UPDATE [dbo].[Tbl_Blog]
+                           SET 
+                {conditions} 
+                         WHERE BlogId = @BlogId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@BlogId", id);
+                if (!string.IsNullOrEmpty(blog.BlogTitle))
+                {
+                    command.Parameters.AddWithValue("@BlogTitle", blog.BlogTitle);
+                }
+                if (!string.IsNullOrEmpty(blog.BlogAuthor))
+                {
+                    command.Parameters.AddWithValue("@BlogAuthor", blog.BlogAuthor);
+                }
+                if (!string.IsNullOrEmpty(blog.BlogContent))
+                {
+                    command.Parameters.AddWithValue("@BlogContent", blog.BlogContent);
+                }
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sqlDataAdapter.Fill(dt);
+                int result = command.ExecuteNonQuery();
+
                 connection.Close();
+
 
                 string message = result > 0 ? "Updating Successful." : "Updating Failed.";
                 return Ok(message);
