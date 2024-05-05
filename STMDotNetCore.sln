@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		STMDotNetCore_DB.sql = STMDotNetCore_DB.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STMDotNetCore.RestApi", "STMDotNetCore.RestApi\STMDotNetCore.RestApi.csproj", "{C6E94F7A-4B45-486D-861D-3E55E327DFF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.RestApi", "STMDotNetCore.RestApi\STMDotNetCore.RestApi.csproj", "{C6E94F7A-4B45-486D-861D-3E55E327DFF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STMDotNetCore.Shared", "STMDotNetCore.Shared\STMDotNetCore.Shared.csproj", "{B5CC8418-8912-493B-BAE1-2AB8092847C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C6E94F7A-4B45-486D-861D-3E55E327DFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6E94F7A-4B45-486D-861D-3E55E327DFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6E94F7A-4B45-486D-861D-3E55E327DFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5CC8418-8912-493B-BAE1-2AB8092847C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5CC8418-8912-493B-BAE1-2AB8092847C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5CC8418-8912-493B-BAE1-2AB8092847C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5CC8418-8912-493B-BAE1-2AB8092847C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

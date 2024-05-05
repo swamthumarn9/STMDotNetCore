@@ -102,75 +102,72 @@ namespace STMDotNetCore.RestApi.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateBlog(int id, BlogModel blog)
         {
-            //var item = FindById(id);
-            //if (item is null)
-            //{
-            //    return NotFound("No data found.");
-            //}
-            if (id == null)
-            {
-                return NotFound("No Data Found.");
-            }
-            else
+            int item = FindById(id);
+            if (item > 0)
             {
                 blog.BlogId = id;
-            }
-
-            string query = @"UPDATE [dbo].[Tbl_Blog]
+                string query = @"UPDATE [dbo].[Tbl_Blog]
                             SET [BlogTitle] = @BlogTitle
                             ,[BlogAuthor] = @BlogAuthor
                             ,[BlogContent] = @BlogContent
                             WHERE BlogId = @BlogId";
-            SqlConnection connection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            connection.Open();
-            SqlCommand cmd = new SqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("@BlogId", id);
-            cmd.Parameters.AddWithValue("@BlogTitle", blog.BlogTitle);
-            cmd.Parameters.AddWithValue("@BlogAuthor", blog.BlogAuthor);
-            cmd.Parameters.AddWithValue("@BlogContent", blog.BlogContent);
-            int result = cmd.ExecuteNonQuery();
-            connection.Close() ;
+                SqlConnection connection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@BlogId", id);
+                cmd.Parameters.AddWithValue("@BlogTitle", blog.BlogTitle);
+                cmd.Parameters.AddWithValue("@BlogAuthor", blog.BlogAuthor);
+                cmd.Parameters.AddWithValue("@BlogContent", blog.BlogContent);
+                int result = cmd.ExecuteNonQuery();
+                connection.Close();
 
-            string message = result > 0 ? "Updating Successful." : "Updating Failed.";
-            return Ok(message);
+                string message = result > 0 ? "Updating Successful." : "Updating Failed.";
+                return Ok(message);
+            }
+            else
+            {
+                return NotFound("No data found.");
+            }
         }
 
 
         [HttpPatch("{id}")]
         public IActionResult PatchBlogs(int id, BlogModel blog)
         {
-            //var item = FindById(id);
-            //if (item is null)
+            //if (id == null)
             //{
-            //    return NotFound("No data found.");
+            //    return NotFound("No Data Found.");
             //}
-            if(id == null)
-            {
-                return NotFound("No Data Found.");
-            }
-            else
+            //else
+            //{
+            //    blog.BlogId = id;
+            //}
+            int item = FindById(id);
+            if (item > 0)
             {
                 blog.BlogId = id;
-            }
-            
-
-            string query = @"UPDATE [dbo].[Tbl_Blog]
+                string query = @"UPDATE [dbo].[Tbl_Blog]
                             SET [BlogTitle] = @BlogTitle
                             ,[BlogAuthor] = @BlogAuthor
                             ,[BlogContent] = @BlogContent
                             WHERE BlogId = @BlogId";
-            SqlConnection connection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            connection.Open();
-            SqlCommand cmd = new SqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("@BlogId", blog.BlogId);
-            cmd.Parameters.AddWithValue("@BlogTitle", blog.BlogTitle);
-            cmd.Parameters.AddWithValue("@BlogAuthor", blog.BlogAuthor);
-            cmd.Parameters.AddWithValue("@BlogContent", blog.BlogContent);
-            int result = cmd.ExecuteNonQuery();
-            connection.Close() ;
+                SqlConnection connection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@BlogId", blog.BlogId);
+                cmd.Parameters.AddWithValue("@BlogTitle", blog.BlogTitle);
+                cmd.Parameters.AddWithValue("@BlogAuthor", blog.BlogAuthor);
+                cmd.Parameters.AddWithValue("@BlogContent", blog.BlogContent);
+                int result = cmd.ExecuteNonQuery();
+                connection.Close();
 
-            string message = result > 0 ? "Updating Successful." : "Updating Failed.";
-            return Ok(message);
+                string message = result > 0 ? "Updating Successful." : "Updating Failed.";
+                return Ok(message);
+            }
+            else
+            {
+                return NotFound("No data found.");
+            }
         }   
 
         [HttpDelete("{id}")]
@@ -188,7 +185,17 @@ namespace STMDotNetCore.RestApi.Controllers
             return Ok(message);
         }
 
-        
+        private int FindById(int id)
+        {
+            string query = "select * from tbl_blog where blogId = @blogId";
+            SqlConnection connection = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            connection.Open();
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId", id);
+            int result = cmd.ExecuteNonQuery();            
+
+            return result;
+        }
 
     }
 }
