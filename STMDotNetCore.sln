@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.ConsoleAppHtt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.ConsoleAppHttpClientExample", "STMDotNetCore.ConsoleAppHttpClientExample\STMDotNetCore.ConsoleAppHttpClientExample.csproj", "{263078A2-2C62-4EA1-8C06-AD153171E1FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STMDotNetCore.ConsoleAppRestClientExamples", "STMDotNetCore.ConsoleAppRestClientExamples\STMDotNetCore.ConsoleAppRestClientExamples.csproj", "{4FA9EEDA-0850-4D17-85CE-25B0376A5C82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.ConsoleAppRestClientExamples", "STMDotNetCore.ConsoleAppRestClientExamples\STMDotNetCore.ConsoleAppRestClientExamples.csproj", "{4FA9EEDA-0850-4D17-85CE-25B0376A5C82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

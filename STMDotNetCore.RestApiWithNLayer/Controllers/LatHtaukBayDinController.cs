@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DotNetTrainingBatch4.RestApiWithNLayer.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -9,10 +10,10 @@ namespace STMDotNetCore.RestApiWithNLayer.Controllers
     public class LatHtaukBayDinController : ControllerBase
     {
 
-        private async Task<LatHtaukBayDin> GetDataAsync()
+        private async Task<LatHtaukBayDinModel> GetDataAsync()
         {
             string jsonStr = await System.IO.File.ReadAllTextAsync("data.json");
-            var model = JsonConvert.DeserializeObject<LatHtaukBayDin>(jsonStr);
+            var model = JsonConvert.DeserializeObject<LatHtaukBayDinModel>(jsonStr);
             return model;
         }
         //api/LatHtaukBayDin/questions
@@ -50,26 +51,7 @@ namespace STMDotNetCore.RestApiWithNLayer.Controllers
         //    num = num.Replace("၉", "9");
         //    num = num.Replace("၀", "0");
         //    return Convert.ToInt32(num);
-
-        public class LatHtaukBayDin
-        {
-            public Question[] questions { get; set; }
-            public Answer[] answers { get; set; }
-            public string[] numberList { get; set; }
-        }
-
-        public class Question
-        {
-            public int questionNo { get; set; }
-            public string questionName { get; set; }
-        }
-
-        public class Answer
-        {
-            public int questionNo { get; set; }
-            public int answerNo { get; set; }
-            public string answerResult { get; set; }
-        }
+       
 
     }
 }
