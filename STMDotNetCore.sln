@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.Shared", "STM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.RestApiWithNLayer", "STMDotNetCore.RestApiWithNLayer\STMDotNetCore.RestApiWithNLayer.csproj", "{87D4C754-5EE9-490A-845B-4945B83AA073}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STMDotNetCore.ConsoleAppHttpClient", "STMDotNetCore.ConsoleAppHttpClient\STMDotNetCore.ConsoleAppHttpClient.csproj", "{242F90B7-9EAD-4598-8CF3-70113B11FE13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.ConsoleAppHttpClient", "STMDotNetCore.ConsoleAppHttpClient\STMDotNetCore.ConsoleAppHttpClient.csproj", "{242F90B7-9EAD-4598-8CF3-70113B11FE13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.ConsoleAppHttpClientExample", "STMDotNetCore.ConsoleAppHttpClientExample\STMDotNetCore.ConsoleAppHttpClientExample.csproj", "{263078A2-2C62-4EA1-8C06-AD153171E1FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STMDotNetCore.ConsoleAppRestClientExamples", "STMDotNetCore.ConsoleAppRestClientExamples\STMDotNetCore.ConsoleAppRestClientExamples.csproj", "{4FA9EEDA-0850-4D17-85CE-25B0376A5C82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{242F90B7-9EAD-4598-8CF3-70113B11FE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{242F90B7-9EAD-4598-8CF3-70113B11FE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{242F90B7-9EAD-4598-8CF3-70113B11FE13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263078A2-2C62-4EA1-8C06-AD153171E1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263078A2-2C62-4EA1-8C06-AD153171E1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263078A2-2C62-4EA1-8C06-AD153171E1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263078A2-2C62-4EA1-8C06-AD153171E1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA9EEDA-0850-4D17-85CE-25B0376A5C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA9EEDA-0850-4D17-85CE-25B0376A5C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA9EEDA-0850-4D17-85CE-25B0376A5C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA9EEDA-0850-4D17-85CE-25B0376A5C82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
