@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace STMDotNetCore.RestApiWithNLayer.Controllers
+namespace STMDotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -35,7 +35,7 @@ namespace STMDotNetCore.RestApiWithNLayer.Controllers
         public async Task<IActionResult> NumberList(int questionNo, int no)
         {
             var model = await GetDataAsync();
-            return Ok(model.answers.FirstOrDefault(x => x.questionNo == questionNo && x.answerNo == no));                    
+            return Ok(model.answers.FirstOrDefault(x => x.questionNo == questionNo && x.answerNo == no));
         }
 
         //static int ToNumber(string num)
@@ -51,7 +51,7 @@ namespace STMDotNetCore.RestApiWithNLayer.Controllers
         //    num = num.Replace("၉", "9");
         //    num = num.Replace("၀", "0");
         //    return Convert.ToInt32(num);
-       
+
 
     }
 }

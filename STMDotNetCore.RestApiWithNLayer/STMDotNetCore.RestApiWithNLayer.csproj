@@ -20,13 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\LatHtaukBayDin\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="data.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

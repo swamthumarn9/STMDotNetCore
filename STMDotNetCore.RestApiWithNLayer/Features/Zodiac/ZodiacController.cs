@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using static STMDotNetCore.RestApiWithNLayer.Controllers.LatHtaukBayDinController;
+using static STMDotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin.LatHtaukBayDinController;
 
-namespace STMDotNetCore.RestApiWithNLayer.Controllers
+namespace STMDotNetCore.RestApiWithNLayer.Features.Zodiac
 {
     [Route("api/[controller]")]
     [ApiController]
