@@ -1,10 +1,10 @@
-﻿using System.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace STMDotNetCore.RestApi
+namespace STMDotNetCore.PizzaApi
 {
-    public class ConnectionStrings
+    internal static class ConnectionStrings
     {
-        public static SqlConnectionStringBuilder SqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        public static SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
             DataSource = "SWAMTHUMARN\\STM_MSSQLSERVER",
             InitialCatalog = "STMDotNetCore",

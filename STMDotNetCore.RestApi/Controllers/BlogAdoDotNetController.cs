@@ -71,7 +71,6 @@ namespace STMDotNetCore.RestApi.Controllers
                 BlogAuthor = Convert.ToString(dr["BlogAuthor"]),
                 BlogContent = Convert.ToString(dr["BlogContent"])
             };
-
             return Ok(dt);
         }
 
@@ -191,9 +190,7 @@ namespace STMDotNetCore.RestApi.Controllers
                 DataTable dt = new DataTable();
                 sqlDataAdapter.Fill(dt);
                 int result = command.ExecuteNonQuery();
-
                 connection.Close();
-
 
                 string message = result > 0 ? "Updating Successful." : "Updating Failed.";
                 return Ok(message);

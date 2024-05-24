@@ -18,5 +18,4 @@
         public string PrettyFeatures { get; set; }
         public TraitModel[] Traits { get; set; }
     }
-
 }

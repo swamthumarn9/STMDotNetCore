@@ -16,7 +16,6 @@ namespace STMDotNetCore.ConsoleApp.Services
             UserID = "sa",
             Password = "root",
             TrustServerCertificate = true
-        };
-        
+        };        
     }
 }

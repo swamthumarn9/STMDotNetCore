@@ -71,7 +71,6 @@ namespace STMDotNetCore.RestApi.Controllers
               ,[BlogAuthor] = @BlogAuthor
               ,[BlogContent] = @BlogContent
                 WHERE BlogId = @BlogId";
-
             
             int result = _dapperService.Execute(query, blog);
             string message = result > 0 ? "Update Successful." : "Update Failed.";
@@ -105,7 +104,6 @@ namespace STMDotNetCore.RestApi.Controllers
             {
                 return NotFound("No Data to Update");
             }
-
             return Ok();
         }
 
@@ -136,7 +134,5 @@ namespace STMDotNetCore.RestApi.Controllers
 
             return item;
         }
-
-
     }
 }

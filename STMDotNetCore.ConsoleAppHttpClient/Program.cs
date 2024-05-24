@@ -10,8 +10,6 @@ var model = JsonConvert.DeserializeObject<MainDto>(jsonStr);
 Console.WriteLine(jsonStr);
 Console.ReadLine();
 
-
-
 public class MainDto
 {
     public Question[] questions { get; set; }

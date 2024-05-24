@@ -4,5 +4,4 @@
     {
         public ZodiacsignsdetailModel[] ZodiacSignsDetail { get; set; }
     }
-
 }

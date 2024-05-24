@@ -16,7 +16,6 @@ namespace STMDotNetCore.ConsoleApp.EFCoreExamples
         {
             optionsBuilder.UseSqlServer(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
         }
-
         public DbSet<BlogDto> Blogs { get; set; }
     }
 }

@@ -9,7 +9,6 @@ namespace STMDotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin
     [ApiController]
     public class LatHtaukBayDinController : ControllerBase
     {
-
         private async Task<LatHtaukBayDinModel> GetDataAsync()
         {
             string jsonStr = await System.IO.File.ReadAllTextAsync("data.json");
@@ -51,7 +50,6 @@ namespace STMDotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin
         //    num = num.Replace("၉", "9");
         //    num = num.Replace("၀", "0");
         //    return Convert.ToInt32(num);
-
-
+        //}
     }
 }

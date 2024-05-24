@@ -32,7 +32,6 @@ namespace STMDotNetCore.RestApi.Controllers
             {
                 return NotFound("No Data Found.");
             }
-
             return Ok(item);
         }
 
@@ -98,12 +97,10 @@ namespace STMDotNetCore.RestApi.Controllers
             {
                 conditions += " [BlogContent] = @BlogContent, ";
             }
-
             if(conditions.Length > 0)
             {
                 return NotFound("No Data to Update");
             }
-
             return Ok();
         }
 
@@ -131,7 +128,5 @@ namespace STMDotNetCore.RestApi.Controllers
 
             return item;
         }
-
-
     }
 }

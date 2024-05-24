@@ -16,16 +16,12 @@ namespace STMDotNetCore.RestApiWithNLayer.Features.MyanmarProverbs
             return model!;
         }
 
-
-
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             var model = await GetDataFromApi();
             return Ok(model.Tbl_MMProverbsTitle);
-        }
-
-                
+        }                       
 
         [HttpGet("{titleName}")]
         public async Task<IActionResult> Get(string titleName)
@@ -55,9 +51,7 @@ namespace STMDotNetCore.RestApiWithNLayer.Features.MyanmarProverbs
 
             return Ok(item);
         }
-
     }
-
 }
 
 public class Tbl_Mmproverbs

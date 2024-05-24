@@ -37,9 +37,4 @@ namespace STMDotNetCore.RestApiWithNLayer.Features.Zodiac
             return Ok(model.ZodiacSignsDetail.FirstOrDefault(x => x.Dates == date));
         }
     }
-
-
-
-
-
 }

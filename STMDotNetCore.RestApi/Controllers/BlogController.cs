@@ -12,7 +12,6 @@ namespace STMDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-
         private readonly AppDbContext _context;
         public BlogController()
         {
@@ -86,7 +85,6 @@ namespace STMDotNetCore.RestApi.Controllers
                 item.BlogContent = blog.BlogContent;
             }
 
-
             var result = _context.SaveChanges();
 
             string message = result > 0 ? "Updating Successful." : "Updating Failed.";
@@ -105,8 +103,6 @@ namespace STMDotNetCore.RestApi.Controllers
             var result = _context.SaveChanges();
             string message = result > 0 ? "Delete Successful." : "Delete Failed.";
             return Ok(message);
-        }
-
-        
+        }        
     }
 }

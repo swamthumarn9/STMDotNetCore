@@ -35,7 +35,6 @@ namespace STMDotNetCore.ConsoleAppHttpClientExample
                     Console.WriteLine($"Author=>{item.BlogAuthor}");
                     Console.WriteLine($"Content=>{item.BlogContent}");
                 }
-
             }
         }
 
