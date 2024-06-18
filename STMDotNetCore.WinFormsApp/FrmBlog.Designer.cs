@@ -36,6 +36,7 @@
             txtAuthor = new TextBox();
             txtContent = new TextBox();
             btnSave = new Button();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // btnCancel
@@ -82,26 +83,26 @@
             // 
             txtTitle.Location = new Point(201, 64);
             txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(316, 31);
+            txtTitle.Size = new Size(348, 31);
             txtTitle.TabIndex = 2;
             // 
             // txtAuthor
             // 
             txtAuthor.Location = new Point(201, 140);
             txtAuthor.Name = "txtAuthor";
-            txtAuthor.Size = new Size(316, 31);
+            txtAuthor.Size = new Size(348, 31);
             txtAuthor.TabIndex = 2;
             // 
             // txtContent
             // 
             txtContent.Location = new Point(201, 215);
             txtContent.Name = "txtContent";
-            txtContent.Size = new Size(316, 31);
+            txtContent.Size = new Size(348, 31);
             txtContent.TabIndex = 2;
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.FromArgb(63, 81, 181);
+            btnSave.BackColor = Color.Green;
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(319, 265);
@@ -112,11 +113,26 @@
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.FromArgb(63, 81, 181);
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(319, 265);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(112, 37);
+            btnUpdate.TabIndex = 4;
+            btnUpdate.Text = "&Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Visible = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // FrmBlog
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnUpdate);
             Controls.Add(btnSave);
             Controls.Add(txtContent);
             Controls.Add(txtAuthor);
@@ -142,5 +158,6 @@
         private TextBox txtAuthor;
         private TextBox txtContent;
         private Button btnSave;
+        private Button btnUpdate;
     }
 }

@@ -6,7 +6,7 @@ namespace STMDotNetCore.RestApiWithNLayer
     {
         public static SqlConnectionStringBuilder SqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
-            DataSource = "SWAMTHUMARN\\STM_MSSQLSERVER",
+            DataSource = "SWAMTHUMARN",
             InitialCatalog = "STMDotNetCore",
             UserID = "sa",
             Password = "root",

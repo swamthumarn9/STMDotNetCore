@@ -6,7 +6,7 @@ namespace STMDotNetCore.PizzaApi
     {
         public static SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
-            DataSource = "SWAMTHUMARN\\STM_MSSQLSERVER",
+            DataSource = "SWAMTHUMARN",
             InitialCatalog = "STMDotNetCore",
             UserID = "sa",
             Password = "root",
