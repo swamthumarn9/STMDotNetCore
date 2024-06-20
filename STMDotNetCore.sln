@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.PizzaApi", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.ConsoleAppRefitExample", "STMDotNetCore.ConsoleAppRefitExample\STMDotNetCore.ConsoleAppRefitExample.csproj", "{7F2F484E-F6A5-418C-8CDB-A79800E5F505}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STMDotNetCore.WinFormsApp", "STMDotNetCore.WinFormsApp\STMDotNetCore.WinFormsApp.csproj", "{859DED6F-FCDE-43AE-B8EC-6DA9B2602257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STMDotNetCore.WinFormsApp", "STMDotNetCore.WinFormsApp\STMDotNetCore.WinFormsApp.csproj", "{859DED6F-FCDE-43AE-B8EC-6DA9B2602257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STMDotNetCoreWinFormsAppSqlInjection", "STMDotNetCoreWinFormsAppSqlInjection\STMDotNetCoreWinFormsAppSqlInjection.csproj", "{16F8490B-6E95-4038-8D02-2A53994DCB75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{859DED6F-FCDE-43AE-B8EC-6DA9B2602257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{859DED6F-FCDE-43AE-B8EC-6DA9B2602257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{859DED6F-FCDE-43AE-B8EC-6DA9B2602257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16F8490B-6E95-4038-8D02-2A53994DCB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16F8490B-6E95-4038-8D02-2A53994DCB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16F8490B-6E95-4038-8D02-2A53994DCB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16F8490B-6E95-4038-8D02-2A53994DCB75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
